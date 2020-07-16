@@ -1,0 +1,4 @@
+commonLabels:
+  app.kubernetes.io/name: mysql
+resources:
+  - github.com/markpollack/kustomize-starters//lift-mysql/local?ref=master

@@ -1,0 +1,5 @@
+namePrefix: accessing-data-mysql-
+commonLabels:
+  app.kubernetes.io/name: accessing-data-mysql
+resources:
+  - github.com/markpollack/kustomize-starters//lift-spring-boot-starter-web?ref=v0.0.3

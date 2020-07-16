@@ -1,0 +1,17 @@
+---
+actions:
+  to: kubernetes/overlays/local/kustomization.yaml
+---
+images:
+  - name: docker.io/spring/testapp  #used for Kustomize matching
+    newName: lift/{{artifactId}}
+    newTag: 0.0.1-SNAPSHOT
+configMapGenerator:
+  - name: spring-configmap  # naming convention in base use to mount the file to /config/application.properties in a persistent volume
+    files:
+      - application.properties
+  - name: spring-configmap-env  # naming convention in base to load environment variables from a reference to this config map
+    envs:
+      - env.properties
+resources:
+  - ../base

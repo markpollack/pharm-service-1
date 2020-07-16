@@ -1,0 +1,7 @@
+applications:
+- framework: spring
+  guid: 82e5e200-e329-4374-a1b5-140aac3aade4
+  language: java
+  name: spring-mysql-jpa
+  service:
+  - name: mysql

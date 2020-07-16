@@ -1,0 +1,9 @@
+---
+actions:
+  to: kubernetes/overlays/base/kustomization.yaml
+---
+namePrefix: {{artifactId}}-
+commonLabels:
+  app.kubernetes.io/name: {{artifactId}}
+resources:
+  - github.com/markpollack/kustomize-starters//lift-spring-boot-starter-web?ref=v0.0.3
